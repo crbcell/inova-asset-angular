@@ -1,0 +1,47 @@
+<div class="main-content">
+  <div class="container-fluid">
+
+    <div _ngcontent-pgg-c9="" class="card">
+      <div _ngcontent-pgg-c9="" class="card-header card-header-gray">
+        <h4 _ngcontent-pgg-c9="" class="card-title ">Perfil Conservador</h4>
+        <p _ngcontent-pgg-c9="" class="card-category">Veja os fundos indicados pra pra você</p>
+      </div>
+      <div _ngcontent-pgg-c9="" class="card-body">
+        <div _ngcontent-pgg-c9="" class="table-responsive">
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> COD Fundo </th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name_fundo">
+    <th mat-header-cell *matHeaderCellDef> Name do Fundo</th>
+    <td mat-cell *matCellDef="let element"> {{element.name_fundo}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="risco_fundo">
+    <th mat-header-cell *matHeaderCellDef> Risco do Fundo </th>
+    <td mat-cell *matCellDef="let element"> {{element.risco_fundo}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> </th>
+    <td mat-cell *matCellDef="let element"> <a href="http://localhost:8080/api/cotas/{{element.risco_fundo}}"><i class="material-icons">arrow_forward</i></a></td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

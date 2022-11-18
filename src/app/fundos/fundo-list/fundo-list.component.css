@@ -1,0 +1,6 @@
+table {
+    width: 100%;
+  }
+  .card .card-header-gray .card-icon, .card .card-header-gray .card-text, .card .card-header-gray:not(.card-header-icon):not(.card-header-text), .card.bg-info, .card.card-rotate.bg-info .front, .card.card-rotate.bg-info .back {
+    background: linear-gradient(60deg, #8b8c8c, #4d4e4e);
+  }
