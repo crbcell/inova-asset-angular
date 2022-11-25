@@ -6,9 +6,9 @@ import {CotaListComponent} from "./cotas/cota-list/cota-list.component";
 import {PerfilComponent} from "./perfis/perfil/perfil.component";
 
 const routes: Routes = [
-  { path: 'fundos', component: FundoListComponent },
+  { path: 'fundos/ativo', component: FundoListComponent },
   { path: 'cotas', component: CotaListComponent },
-  { path: '', component: PerfilComponent },
+  { path: '', component: PerfilComponent }
 ];
 
 @NgModule({

@@ -9,10 +9,10 @@ export class FundoComponent {
 
  title = 'Inove Asset';
   @Input() id = '';
-  @Input() nome_fundo = '';
-  @Input() cnpj_fundo = '';
-  @Input() data_abertura_fundo = '';
-  @Input() data_encerramento_fundo = '';
-  @Input() risco_fundo='';
+  @Input() nome_FUNDO = '';
+  @Input() cnpj_FUNDO = '';
+  @Input() data_ABERTURA_FUNDO = '';
+  @Input() data_ENCERRAMENTO_FUNDO = '';
+  @Input() risco_FUNDO='';
 
 }

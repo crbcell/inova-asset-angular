@@ -3,7 +3,7 @@
 
     <div _ngcontent-pgg-c9="" class="card">
       <div _ngcontent-pgg-c9="" class="card-header card-header-gray">
-        <h4 _ngcontent-pgg-c9="" class="card-title ">Perfil Conservador</h4>
+        <h4 _ngcontent-pgg-c9="" class="card-title ">Lista de Fundos Ativos</h4>
         <p _ngcontent-pgg-c9="" class="card-category">Veja os fundos indicados pra pra você</p>
       </div>
       <div _ngcontent-pgg-c9="" class="card-body">
@@ -13,28 +13,32 @@
   <!--- Note that these columns can be defined in any order.
         The actual rendered columns are set as a property on the row definition" -->
 
+
+
   <!-- Position Column -->
   <ng-container matColumnDef="id">
-    <th mat-header-cell *matHeaderCellDef> COD Fundo </th>
-    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    <th mat-header-cell *matHeaderCellDef> Id </th>
+    <td mat-cell *matCellDef="let element"> {{element['id']}} </td>
   </ng-container>
 
-  <!-- Name Column -->
-  <ng-container matColumnDef="name_fundo">
-    <th mat-header-cell *matHeaderCellDef> Name do Fundo</th>
-    <td mat-cell *matCellDef="let element"> {{element.name_fundo}} </td>
+  <ng-container matColumnDef="nome_FUNDO">
+    <th mat-header-cell *matHeaderCellDef> Nome Fundo </th>
+    <td mat-cell *matCellDef="let element"> {{element.nome_FUNDO}} </td>
   </ng-container>
 
-  <!-- Weight Column -->
-  <ng-container matColumnDef="risco_fundo">
-    <th mat-header-cell *matHeaderCellDef> Risco do Fundo </th>
-    <td mat-cell *matCellDef="let element"> {{element.risco_fundo}} </td>
+  <ng-container matColumnDef="cnpj_FUNDO">
+    <th mat-header-cell *matHeaderCellDef> Cnpj Fundo </th>
+    <td mat-cell *matCellDef="let element"> {{element.cnpj_FUNDO}} </td>
   </ng-container>
 
-  <!-- Symbol Column -->
-  <ng-container matColumnDef="id">
-    <th mat-header-cell *matHeaderCellDef> </th>
-    <td mat-cell *matCellDef="let element"> <a href="http://localhost:8080/api/cotas/{{element.risco_fundo}}"><i class="material-icons">arrow_forward</i></a></td>
+  <ng-container matColumnDef="data_ABERTURA_FUNDO">
+    <th mat-header-cell *matHeaderCellDef>Dt Abertura fundo</th>
+    <td mat-cell *matCellDef="let element"> {{element.data_ABERTURA_FUNDO | date: 'dd/MM/yyyy'}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="risco_FUNDO">
+    <th mat-header-cell *matHeaderCellDef>Risco do Fundo</th>
+    <td mat-cell *matCellDef="let element"> {{element.risco_FUNDO}} </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

@@ -12,11 +12,8 @@ export class FundoService {
   constructor(private http: HttpClient) { }
 
   listJsonFundo() {
-    return this.http.get<Fundo[]>(API+'fundos')
+    return this.http.get<Fundo[]>(API+'fundos/ativos')
   }
-
-  listarTodos(): Observable<[any]> { return this.http.get<[any]>(API+ 'listar'); };
-
-
+  //listJsonFundo(): Observable<[any]> { return this.http.get<[any]>(API+ 'listar'); };
 }
 
